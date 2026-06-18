@@ -1,0 +1,61 @@
+/* Walker — Backrooms (Level 0 Terminal).
+   The base Omarchy walker style @imports this file first, then redefines
+   .box-wrapper etc. after it, so we use a `window` prefix to win on
+   specificity. Dim yellow-room photo panel, cream text, mustard "pill"
+   selection, static "CURRENT LEVEL: 0  ● STABLE" status strip at the bottom.
+   url() paths are relative -> resolve against the copied current/theme dir. */
+
+@define-color base          #14140c;   /* dark olive black panel */
+@define-color text          #d8d2a8;   /* fluorescent cream text/icons */
+@define-color border        #c2b54a;   /* mustard edge */
+@define-color background    #14140c;
+@define-color selected-text #14140c;   /* dark text on the mustard pill */
+
+/* Dim yellow-room photo + olive wash. The status strip sits in the reserved
+   bottom padding. If the image ever fails, @base keeps a solid panel. */
+window .box-wrapper {
+    background-color: #14140c;
+    background-image:
+        url("walker-status.png"),
+        linear-gradient(180deg, rgba(20,20,12,0.78) 0%, rgba(20,20,12,0.90) 60%, rgba(20,20,12,0.97) 100%),
+        url("walker-bg.png");
+    background-position: center bottom 14px, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 88% auto, cover, cover;
+    border: 2px solid alpha(@border, 0.7);
+    border-radius: 4px;
+    padding: 14px 14px 64px 14px;
+}
+
+/* Search row: transparent over the panel, thin mustard divider underneath */
+window .search-container {
+    background: transparent;
+    border-bottom: 2px solid alpha(@border, 0.5);
+    padding: 10px 12px 12px 12px;
+    margin: 0 2px 8px 2px;
+}
+
+window .input placeholder {
+    color: @text;
+    opacity: 0.55;
+}
+
+/* Selected row = mustard pill (text/icon color comes from @selected-text) */
+window child:selected .item-box {
+    background: #c2b54a;
+    border-radius: 3px;
+    margin: 0 2px;
+}
+
+window child:selected {
+    background: transparent;
+}
+
+window .item-box {
+    padding: 2px 12px;
+}
+
+/* Compact rows */
+window .item-text-box {
+    padding: 6px 0;
+}
