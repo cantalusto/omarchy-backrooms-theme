@@ -5,6 +5,8 @@ black, fluorescent cream, and that dry mustard-yellow wallpaper. You noclipped o
 of reality and into your terminal.
 
 ![Backrooms theme](preview.png)
+![Walker — Level 0 Terminal](showcase-walker.png)
+![fastfetch, peaclock clock and cmatrix](showcase-desktop.png)
 
 ## Palette
 
@@ -53,6 +55,8 @@ Apply the boot splash and reboot login via Omarchy's Unlock menu:
 This sets the cream **"Backrooms" ASCII wordmark on dark olive** for both the
 Plymouth boot screen and the SDDM login. It survives reboots and `omarchy update`.
 
+![Login screen](showcase-login.png)
+
 ## Extras — install manually
 
 These live in `extras/` and aren't part of Omarchy's theme system, so they don't
@@ -60,7 +64,7 @@ apply automatically. Each command backs up your current file first.
 
 ### System info (fastfetch)
 
-A `BACKROOMS / LEVEL 0` ASCII banner in mustard, keeping all the Omarchy modules.
+A Braille entity portrait in mustard, keeping all the Omarchy system modules.
 
 ```bash
 cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.bak
