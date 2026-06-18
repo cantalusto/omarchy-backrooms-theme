@@ -53,6 +53,42 @@ Apply the boot splash and reboot login via Omarchy's Unlock menu:
 This sets the cream **"Backrooms" ASCII wordmark on dark olive** for both the
 Plymouth boot screen and the SDDM login. It survives reboots and `omarchy update`.
 
+## Extras — install manually
+
+These live in `extras/` and aren't part of Omarchy's theme system, so they don't
+apply automatically. Each command backs up your current file first.
+
+### System info (fastfetch)
+
+A `BACKROOMS / LEVEL 0` ASCII banner in mustard, keeping all the Omarchy modules.
+
+```bash
+cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.bak
+cp ~/.config/omarchy/themes/backrooms/extras/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
+```
+
+### Shell prompt (Starship)
+
+Powerline segments fading from dry mustard (user) down to olive black (clock).
+
+```bash
+cp ~/.config/starship.toml ~/.config/starship.toml.bak
+cp ~/.config/omarchy/themes/backrooms/extras/starship.toml ~/.config/starship.toml
+```
+
+Open a new terminal to see it.
+
+### Lock screen layout (hyprlock)
+
+A liminal layout: big clock, greeting, rotating phrases ("No-clip.", "Mind the
+almond water."…), mustard lock + password field. Pulls its colors from the active
+theme and uses the wallpaper as the background.
+
+```bash
+cp ~/.config/hypr/hyprlock.conf ~/.config/hypr/hyprlock.conf.bak
+cp ~/.config/omarchy/themes/backrooms/extras/hyprlock.conf ~/.config/hypr/hyprlock.conf
+```
+
 ## Updating
 
 ```bash
@@ -62,6 +98,9 @@ omarchy theme set "Backrooms"
 
 > Don't edit files inside `~/.config/omarchy/themes/backrooms/` directly —
 > `omarchy theme update` runs `git pull` and your changes would block it.
+
+**The extras don't auto-update.** If an extra changed upstream, re-run its `cp`
+command after updating.
 
 ## Wallpapers & credits
 
