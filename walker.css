@@ -21,10 +21,10 @@ window .box-wrapper {
         url("walker-bg.png");
     background-position: 50% 99%, center, center;
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 94% auto, cover, cover;
+    background-size: 96% auto, cover, cover;
     border: 2px solid alpha(@border, 0.7);
     border-radius: 4px;
-    padding: 14px 14px 56px 14px;
+    padding: 14px 14px 80px 14px;
 }
 
 /* Search row: transparent over the panel, thin mustard divider underneath */
