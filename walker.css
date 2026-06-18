@@ -17,14 +17,14 @@ window .box-wrapper {
     background-color: #14140c;
     background-image:
         url("walker-status.png"),
-        linear-gradient(180deg, rgba(20,20,12,0.78) 0%, rgba(20,20,12,0.90) 60%, rgba(20,20,12,0.97) 100%),
+        linear-gradient(180deg, rgba(20,20,12,0.74) 0%, rgba(20,20,12,0.42) 32%, rgba(20,20,12,0.40) 60%, rgba(20,20,12,0.70) 100%),
         url("walker-bg.png");
-    background-position: center bottom 14px, center, center;
+    background-position: 50% 99%, center, center;
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 88% auto, cover, cover;
+    background-size: 94% auto, cover, cover;
     border: 2px solid alpha(@border, 0.7);
     border-radius: 4px;
-    padding: 14px 14px 64px 14px;
+    padding: 14px 14px 56px 14px;
 }
 
 /* Search row: transparent over the panel, thin mustard divider underneath */
